@@ -1,0 +1,41 @@
+Player specifications:
+Player:
+32  - SR - int   - shape radius
+32  - CR - int   - collision radius
+5   - FR - int   - fill color R
+5   - FG - int   - fill color G
+5   - FB - int   - fill color B
+255 - OR - int   - outline color R
+0   - OG - int   - outline color G
+0   - OB - int   - outline color B
+5   - OT - int   - outline thickness
+8   - V  - int   - vertices
+10  - S  - float - speed
+
+Enemy:
+32  - SR   - int   - shape radius
+32  - CR   - int   - collision radius
+255 - OR   - int   - outline color R
+255 - OG   - int   - outline color G
+255 - OB   - int   - outline color B
+5   - OT   - int   - outline thickness
+3   - VMIN - int   - minimum vertices
+10  - VMAX - int   - maximum vertices
+60  - SI   - int   - enemy spawn interval
+90  - SL   - int   - small enemy lifespan
+2   - SMIN - float - minimum speed
+10  - SMAX - float - maximum speed
+
+Bullet:
+10  - SR - int   - shape radius
+10  - CR - int   - collision radius
+255 - FR - int   - fill color R
+255 - FG - int   - fill color G
+255 - FB - int   - fill color B
+255 - OR - int   - outline color R
+255 - OG - int   - outline color G
+255 - OB - int   - outline color B
+2   - OT - int   - outline thickness
+20  - V  - int   - vertices
+30  - L  - int   - lifespan
+20  - S  - float - speed
