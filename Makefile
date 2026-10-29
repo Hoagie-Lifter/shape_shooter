@@ -15,8 +15,11 @@ vpath %.cpp $(dir $(SRCS))
 main: $(OBJS)
 	$(CXX) $(OBJS) -o main -L$(SFML)/lib $(LIBS)
 
-build/%.o: %.cpp
+build/%.o: %.cpp | build
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+	
+build:
+	mkdir build
 
 run: main
 	copy $(subst /,\,$(DLLS))\*.dll .
@@ -24,6 +27,7 @@ run: main
 	-del $(notdir $(wildcard $(DLLS)/*.dll))
 
 clean:
-	-del /Q $(subst /,\,$(OBJS) $(OBJS:.o=.d)) main.exe
+	-rmdir /S /Q build
+	-del /Q main.exe
 
 -include $(OBJS:.o=.d)
