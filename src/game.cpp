@@ -550,6 +550,8 @@ void Game::sCollision()
 				m_player -> destroy();
 
 				std::cout << "GAME OVER!\n";
+				
+				m_paused = true;
 			}
 			
 			if (!b -> isActive()) continue;

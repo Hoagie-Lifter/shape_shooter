@@ -34,10 +34,9 @@ void EntityManager::update()
 
 void EntityManager::removeDeadEntities(EntityVec & vec)
 {
-	// TODO: remove all dead entities from the input vector
-	// this is called by the update() function
-	
 	//implementation
+	// secondary possibility - loop over entities, add to newly made vector if isActiv() is false
+	// then remove entities in the new vector from the original vector, for iterator invalidation 
 	vec.erase(std::remove_if (vec.begin(), vec.end(), [](const std::shared_ptr<Entity> & e)
 	{
 		return !e -> isActive();
